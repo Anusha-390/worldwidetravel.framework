@@ -19,6 +19,7 @@ public class ThreadSafe {
 	{
 		return eTest.get();
 	}
+	
 	public static void setETest( ExtentTest sTest) {
 		eTest.set( sTest);
 	}
