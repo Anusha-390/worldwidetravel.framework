@@ -4,7 +4,6 @@
 <groups>
 <run>
 <include name="sanity"></include>
-<include name="smoke"></include>
 <include name="Regression"></include>
 <include name="Integration"></include>
 <include name="System"></include>
