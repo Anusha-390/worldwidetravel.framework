@@ -2,9 +2,8 @@ package practice;
 
 import org.testng.annotations.Test;
 
-import com.genericUtility.BaseClass;
 
-public class GroupExceutionTest_1 extends BaseClass {
+public class GroupExceutionTest_1 {
 
 	@Test(groups = {"sanity"})
 	public void grpTest11()
