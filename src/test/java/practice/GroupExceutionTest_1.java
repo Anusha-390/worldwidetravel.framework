@@ -24,7 +24,7 @@ public class GroupExceutionTest_1 extends BaseClass {
 		System.out.println("grpTest13");
 	}
 	
-	@Test(groups = "Regrassion")
+	@Test(groups = "Regression")
 	public void grpTest14()
 	{
 		System.out.println("grpTest14");
