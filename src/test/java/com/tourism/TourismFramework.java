@@ -3,6 +3,9 @@ package com.tourism;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.Date;
 import java.util.List;
 
@@ -22,9 +25,13 @@ public class TourismFramework extends BaseClass {
 	public void UserBookTourpackageTest() throws InterruptedException { 
 		
 		Date date=new Date();
+		System.out.println(date);
 		String date1 = date.toString().split(" ")[3];
+		System.out.println(date1);
 		String date2 = date1.split(":")[0];
+		System.out.println(date2);
 		String date3 = date1.split(":")[1];
+		System.out.println(date3);
 		String date4=date2+":"+date3;
 		System.out.println(date4);
 		String expectedBookingTime=date3.toString();
@@ -53,7 +60,7 @@ public class TourismFramework extends BaseClass {
 		UserCommonPage.enterComment("hellooo");
 		UserCommonPage.clickOnMyTourHistory();
 
-		int count = UserCommonPage.getBookingTime(UserCommonPage.getAllBookingId(), expectedBookingTime);
+		//int count = UserCommonPage.getBookingTime(UserCommonPage.getAllBookingId(), expectedBookingTime);
 
 		 
 			
@@ -64,7 +71,7 @@ public class TourismFramework extends BaseClass {
 		String afterbookingStatus = adminCommonPage.getConfirmBookingStatus();
 		int abs = Integer.parseInt(afterbookingStatus);
 
-		int ebs = bs+count;
+		int ebs = bs+1;
 
 		System.out.println("after bs ----> "+ebs);
 		System.out.println("actual ------> "+abs);
@@ -177,7 +184,7 @@ public  void CancelmyTourTest() throws InterruptedException{
 }
 
 @Test
-public  void AdminManageBookinTest() throws InterruptedException  {
+public  void AdminManageBookinTest() throws InterruptedException, AWTException  {
 
 
 	AdminManageBookingPage AdminManageBookingPage=new AdminManageBookingPage(driver);
@@ -186,7 +193,17 @@ public  void AdminManageBookinTest() throws InterruptedException  {
 
 	adminCommonPage.clickManageBooking();
 
-	String expectedId = "#BK-14";
+	String expectedId = "#BK-18";
+	
+	Robot r=new Robot();
+	
+	for(int i=1;i<=3;i++)
+	{
+	r.keyPress(KeyEvent.VK_CONTROL);
+	r.keyPress(KeyEvent.VK_MINUS);
+	r.keyRelease(KeyEvent.VK_CONTROL);
+	r.keyRelease(KeyEvent.VK_MINUS);
+	}
 
 
 	AdminManageBookingPage.scrollUptoTheElement(expectedId);

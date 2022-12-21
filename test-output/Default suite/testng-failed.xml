@@ -3,15 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tourism.AdminManageBookinTest">
+      <class name="com.tourism.TourismFramework">
         <methods>
+          <include name="CreateTourpackageTest"/>
           <include name="test1"/>
           <include name="methodTearSetup"/>
           <include name="classTearSetup"/>
+          <include name="CancelmyTourTest"/>
           <include name="Test1"/>
-          <include name="main"/>
+          <include name="UserBookTourpackageTest"/>
         </methods>
-      </class> <!-- com.tourism.AdminManageBookinTest -->
+      </class> <!-- com.tourism.TourismFramework -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

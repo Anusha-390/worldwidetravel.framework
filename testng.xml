@@ -3,10 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.tourism.CancelmyTourTest"/>
-      <class name="com.tourism.UserBookTourpackageTest"/>
-      <class name="com.tourism.AdminManageBookinTest"/>
-      <class name="com.tourism.CreateTourpackageTest"/>
+      <class name="practice.GroupExceutionTest_1"/>
+      <class name="practice.GroupExceutionTest_2"/>
+      <class name="practice.GroupExceutionTest_3"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
